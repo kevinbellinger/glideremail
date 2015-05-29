@@ -67,6 +67,7 @@ h6 {
 }
 
 
+
 .hero {
   border-width: 3px;
   border-color: rgb(250, 250, 250);
@@ -122,6 +123,14 @@ h6 {
 
   height: 189px;
 
+}
+
+.OS
+h1 {
+  font-size: 50px;
+  font-family: "Avenir Next";
+  color: rgb(27, 157, 217);
+  font-weight: bold;
 }
 
 
