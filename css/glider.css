@@ -79,7 +79,7 @@ h1 {
   font-size: 50px;
   font-family: "Avenir Next";
   color: rgb(27, 157, 217);
-  font-weight: bold;
+
 
 }
 
@@ -109,7 +109,7 @@ h5 {
   font-family: "Avenir Next";
   color: #fafafa;
   line-height: 1.2;
-  font-weight: bold;
+
 }
 
 h6 {
@@ -174,7 +174,7 @@ h6 {
 
 
 
-  min-height: 189px;
+  min-height: 220px;
 
 }
 
@@ -193,8 +193,8 @@ h1 {
 
   .hero-image {
 
-   width: 40%;
-   height: 40%;
+   width: 50%;
+   height: 50%;
  }
 
  .default-view-image {
