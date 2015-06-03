@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-md-12">
+        <img src="~/images/logo.png" alt="" class="logo" />
+        <img width="100%" src="~/images/top-image.jpg" alt="" />
+
+        <div id="view">
+            <div class="row">
+                <div class="col-sm-7">
+                    <h3>Accepter betingelserne for brug for at få din aktiveringskode</h3>
+                    <p class="view-text">For at få din aktiveringskode til download og installation skal du acceptere betingelserne for brug af Microsoft Office 365 Home.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="condition-box">
+                        <p>Betingelser for brug af Microsoft Office 365 Home</p>
+                        <span>Jeg  giver hermed mit samtykke til, at Microsoft deler følgende data omkring min Microsoft Office 365 Home konto med Telenor: Dato for licens aktivering, antal oprettede brugere, hvilken platform, som anvendes til produktet, One Drive pladsforbrug, seneste log in dato og hvornår automatisk billede upload senest er anvendt. Telenor anvender informationerne til at yde en bedre service og rådgivning omkring produktet.</span>
+                    </div>
+
+                    @using (@Html.BeginForm("RedeemVoucher", "OfficeHome", FormMethod.Post, new { @id = "terms-form", @class = "terms" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.HiddenFor(m => m.VoucherId)
+                        <div class="condition-box-2">
+                            <label>
+                                @Html.CheckBoxFor(m => m.TermsAndConditionsAccepted, new { @id = "vilkaar" })
+                                Jeg accepterer betingelserne for brug af<br /><a id="winOpenLink" href="#">Microsoft Office 365 Home</a>.
+                            </label>
+                        </div>
+                        <button id="submitter" type="submit" class="green-btn">Fortsæt til aktiveringskode<img src="~/images/btn_arrow.png" alt="" class="pull-right" /></button>
+                        <div class="clearfix"></div>
+                        <span id="TermsAndConditionsAccepted-error" class=""></span>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
